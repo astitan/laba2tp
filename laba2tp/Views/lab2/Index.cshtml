@@ -1,0 +1,18 @@
+﻿
+@model laba2tp.Models.Dannie
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <h1>@Html.LabelForModel(): @Model.UserId</h1>
+    <h3>Данные пользователя: @Html.DisplayForModel()</h3>
+
+
+
+    
+    @Html.ActionLink("Добавить пользователя", "Addn")
+}

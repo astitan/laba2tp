@@ -1,0 +1,28 @@
+﻿@model laba2tp.Models.Dannie
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.LabelFor(m => m.FirstName)<br />        
+    @Html.EditorFor(m => m.FirstName)<br /> 
+     
+    @Html.LabelFor(m => m.LastName)<br />        
+    @Html.EditorFor(m => m.LastName)<br />
+    
+    @Html.LabelFor(m => m.BirthDate)<br />        
+    @Html.EditorFor(m => m.BirthDate)<br />
+    
+    @Html.LabelFor(m => m.HomeAddress)<br />        
+    @Html.EditorFor(m => m.HomeAddress)<br />
+    
+    @Html.LabelFor(m => m.EmailAddress)<br />        
+    @Html.EditorFor(m => m.EmailAddress)<br />
+    
+    @Html.ActionLink("Пользователи", "Users")<br />
+
+    <input class="button" type="submit" name="click" value="Добавить пользователя" />
+}

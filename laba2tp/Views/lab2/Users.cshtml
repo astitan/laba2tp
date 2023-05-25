@@ -1,0 +1,28 @@
+﻿@model List<laba2tp.Models.Dannie>
+@using static laba2tp.Controllers.lab2
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@foreach (var a in usersList)
+{
+    <tr>
+        <td>ID: @a.UserId  </td>
+        <br />
+        <td>Имя: @a.FirstName </td>
+        <br />
+        <td>Фамилия: @a.LastName </td>
+        <br />
+        <td>Дата рождения: @a.BirthDate </td>
+        <br />
+        <td>Адрес: @a.HomeAddress </td>
+        <br />
+        <td>E-mail: @a.EmailAddress </td>
+        <br />
+    </tr>
+}
+
+@Html.ActionLink("Добавить пользователя", "Addn")
+
